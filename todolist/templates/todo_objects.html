@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .one_todo_obj{
+            display: flex;
+            margin: 5px 5px;
+        }
+
+        .one_todo_inner{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one_todo_obj">
+        {% for obj in todo_objects %}
+                <div class="one_todo_inner">
+                    <div>{{ obj.name }}</div>
+                    <div>{{ obj.description }}</div>
+                    <div>{{ obj.deadline }}</div>
+                    <div>{{ obj.done }}</div>
+                </div>
+            {% endfor %}
+    </div>
+</body>
+</html>
